@@ -417,3 +417,19 @@ a{
     }
     
   }
+
+  /* grid */
+  .grid{
+    display:grid;
+  }
+
+  @media screen and (min-width:768px){
+    .grid--cols-2{
+        grid-template-columns: 1fr 1fr;/*we take all the available space divide it by 2 and give each column 1 slice;*/
+    }
+  }
+  @media screen and (min-width:1024px){
+    .grid--cols-2{
+        grid-template-columns: 1fr 1fr 1fr;/*we take all the available space divide it by 2 and give each column 1 slice;*/
+    }
+  }
