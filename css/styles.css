@@ -157,19 +157,31 @@ a{
     
 }
 
+.icon--small{
+    width:20px;
+    height:20px;
+}
+
 .icon--primary{
     fill:var(--color-primary);
 }
 
+.icon--white{
+    fill:white;
+}
 .icon-container{
-    background-color: #3a8ffd;
-    width:60px;/*doesn't apply for inline elements hence used inine-block*/
-    height:60px;/*doesn't apply for inline elements hence used inine-block*/
+    background-color:  #f3f9fa;
+    width: 64px;/*doesn't apply for inline elements hence used inine-block*/
+    height: 64px;/*doesn't apply for inline elements hence used inine-block*/
     border-radius:50%;
     display:inline-flex;
     justify-content: center;
     align-items:center;
 } 
+
+.icon-container--accent{
+    background: var(--color-accent);
+}
 
 /*buttons*/
 .btn{
@@ -431,5 +443,35 @@ a{
   @media screen and (min-width:1024px){
     .grid--cols-2{
         grid-template-columns: 1fr 1fr 1fr;/*we take all the available space divide it by 2 and give each column 1 slice;*/
+    }
+  }
+
+  /*testimonials*/
+  .testimonials{
+    padding:3rem;
+  }
+
+  .testimonial__image{
+    position:relative;
+  }
+
+  .testimonial__image > img{/* indicating to image directely inside the testimonia__image*/
+    width:100%;
+  }
+  .testimonial__image> .icon-container{
+    position: absolute;
+    top:3rem;
+    right:-32px;/*to place it in the middle of image line it should be divided by width of icon container*/
+
+  }
+  @media screen and (min-width:768px){
+    .testimonials .quote,
+    .testimonials .quote__author
+    {
+        font-size:2rem;
+    }
+
+    .testimonials .quote{
+        margin-left:6rem;
     }
   }
