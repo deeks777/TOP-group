@@ -185,7 +185,7 @@ a{
 
 /*buttons*/
 .btn{
-    border-radius: 40rem;
+    border-radius: 40px;
     border:none;
     cursor:pointer;
     font-size:1.5rem;
@@ -233,6 +233,11 @@ a{
 .btn--outline:hover{
     background:var(--color-headings);
     color:#fff;
+}
+
+.btn--strecthed{
+    padding-left:6rem;
+    padding-right:6rem;
 }
 
 
@@ -473,5 +478,45 @@ a{
 
     .testimonials .quote{
         margin-left:6rem;
+    }
+  }
+
+  /*Callout*/
+  .callout{
+    border-radius: 5px;
+    padding:4rem;
+  }
+
+  .callout--primary{
+    background: var(--color-primary);
+    color:#fff;
+  }
+
+  .callout__heading{
+    color:#fff;
+    margin-top:0;
+    font-size:3rem;
+  }
+
+  .callout .btn{
+    justify-self:center;
+    align-self:center;
+  }
+
+  .callout__content{
+    text-align: center;
+  }
+
+  @media screen and (min-width:768px){
+    .callout .grid--cols-2{
+        grid-template-columns: 1fr auto;/*when we set it to auto 1fr content will automatically fill the remaining space*/
+    }
+    .callout__content{
+        text-align: left;
+    }
+
+    .callout .btn{
+        margin:0 2rem;
+        justify-self:start;  /*this is  a property applied to a grid item*/
     }
   }
