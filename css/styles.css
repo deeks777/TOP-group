@@ -10,6 +10,8 @@
     --color-accent: #ff3400;
     --color-headings: #1b0760;
     --color-body: #918ca4;
+    --color-border: #ccc;
+    --border-radius: 30px;
 }
     /*typography*/
 html{
@@ -88,7 +90,7 @@ a{
 }
 /*Badges*/
 .badge{  /*structure*/
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     font-size:2rem;
     font-weight: bold 600px;
     padding: 0.5rem 2rem;
@@ -159,7 +161,7 @@ a{
 }
 
 .icon-container{
-    background-color: #00d9ff;
+    background-color: #3a8ffd;
     width:60px;/*doesn't apply for inline elements hence used inine-block*/
     height:60px;/*doesn't apply for inline elements hence used inine-block*/
     border-radius:50%;
@@ -223,6 +225,42 @@ a{
 
 @media screen and (min-width:1024px){
     .btn{
+        font-size:1.5rem;
+    }
+}
+
+/*Inputs*/
+.input{
+    border-radius: var(--border-radius);
+    border:1px solid var(--color-border);
+    color:var(--color-headings);
+    font-size:2rem;
+    outline:0;
+    padding:1.5rem 3.5rem;
+}
+
+::placeholder{
+    color:#cdcbd7;
+
+}
+.input-group{
+    border:1px solid var(--color-border);
+    border-radius:var(--border-radius);
+    display: flex;
+}
+
+.input-group .input{
+    border:0;
+    flex-grow:100;
+    padding:1.5rem 1rem;
+}
+
+.input-group .btn{
+    margin:4px;
+}
+
+@media screen and (min-width:1024px){
+    .input{
         font-size:1.5rem;
     }
 }
